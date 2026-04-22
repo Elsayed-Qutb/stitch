@@ -1,0 +1,478 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>تحليلات النمو - نمو الأطفال</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed": "#f0dbff",
+                        "secondary-fixed-dim": "#89ceff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#6063ee",
+                        "outline-variant": "#c7c4d7",
+                        "on-primary-fixed": "#07006c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "surface-tint": "#494bd6",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed-dim": "#ddb7ff",
+                        "surface-container": "#eceef0",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "inverse-primary": "#c0c1ff",
+                        "on-tertiary-fixed-variant": "#6900b3",
+                        "tertiary": "#8127cf",
+                        "secondary-container": "#39b8fd",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary": "#006591",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#9c48ea",
+                        "primary": "#4648d4",
+                        "surface-container-low": "#f2f4f6",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-container": "#004666",
+                        "outline": "#767586",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#c9e6ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed": "#001e2f",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#464554",
+                        "on-tertiary-fixed": "#2c0051",
+                        "on-primary-container": "#fffbff",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "primary-fixed": "#e1e0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "arabic-body": ["Tajawal"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "title-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "arabic-body": ["16px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.04);
+        }
+        .chart-gradient-weight {
+            background: linear-gradient(180deg, rgba(70, 72, 212, 0.1) 0%, rgba(70, 72, 212, 0) 100%);
+        }
+        .chart-gradient-height {
+            background: linear-gradient(180deg, rgba(129, 39, 207, 0.1) 0%, rgba(129, 39, 207, 0) 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- Sidebar Navigation Shell -->
+<aside class="h-screen w-72 fixed right-0 border-l border-white/50 bg-white/80 backdrop-blur-2xl shadow-[-10px_0_30px_rgba(99,102,241,0.04)] z-50 overflow-y-auto">
+<div class="flex flex-col h-full p-6 space-y-2 rtl font-body-md text-right">
+<!-- Brand Header -->
+<div class="mb-8 px-4 flex flex-row-reverse items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-200">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: &quot;FILL&quot; 1;">child_care</span>
+</div>
+<div>
+<h1 class="text-xl font-black text-indigo-600 leading-tight" style="">Children Growth</h1>
+<p class="text-[10px] text-slate-400 font-bold tracking-widest uppercase" style="">نظام إدارة البيانات الطبية</p>
+</div>
+</div>
+<!-- Primary Tabs -->
+<nav class="space-y-1">
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 transition-colors rounded-lg group" href="#" style="">
+<span class="material-symbols-outlined ml-3 group-hover:text-indigo-600 transition-colors" style="">dashboard</span>
+<span class="font-arabic-body" style="">لوحة التحكم</span>
+</a>
+<a class="flex flex-row-reverse items-center bg-indigo-50/80 text-indigo-700 rounded-lg px-4 py-3 font-semibold shadow-sm shadow-indigo-100/50" href="#" style="">
+<span class="material-symbols-outlined ml-3" style="font-variation-settings: &quot;FILL&quot; 1;">show_chart</span>
+<span class="font-arabic-body" style="">منحنيات النمو</span>
+</a>
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 transition-colors rounded-lg group" href="#" style="">
+<span class="material-symbols-outlined ml-3 group-hover:text-indigo-600 transition-colors" style="">group</span>
+<span class="font-arabic-body" style="">سجلات المرضى</span>
+</a>
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 transition-colors rounded-lg group" href="#" style="">
+<span class="material-symbols-outlined ml-3 group-hover:text-indigo-600 transition-colors" style="">calendar_today</span>
+<span class="font-arabic-body" style="">المواعيد</span>
+</a>
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 transition-colors rounded-lg group" href="#" style="">
+<span class="material-symbols-outlined ml-3 group-hover:text-indigo-600 transition-colors" style="">description</span>
+<span class="font-arabic-body" style="">التقارير</span>
+</a>
+</nav>
+<div class="pt-8 mb-4">
+<button class="w-full bg-gradient-to-l from-indigo-600 to-purple-500 text-white rounded-xl py-4 font-bold flex items-center justify-center gap-2 shadow-lg shadow-indigo-100 active:scale-[0.98] transition-transform" style="">
+<span class="material-symbols-outlined" style="">add</span>
+<span class="font-arabic-body" style="">إضافة طفل جديد</span>
+</button>
+</div>
+<!-- Footer Tabs -->
+<div class="mt-auto border-t border-slate-100 pt-6 space-y-1">
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 transition-colors rounded-lg group" href="#" style="">
+<span class="material-symbols-outlined ml-3 group-hover:text-indigo-600 transition-colors" style="">settings</span>
+<span class="font-arabic-body" style="">الإعدادات</span>
+</a>
+<a class="flex flex-row-reverse items-center text-error px-4 py-3 hover:bg-red-50 transition-colors rounded-lg group" href="#" style="">
+<span class="material-symbols-outlined ml-3" style="">logout</span>
+<span class="font-arabic-body" style="">تسجيل الخروج</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="mr-72 p-xl">
+<!-- Top Nav Bar Shell -->
+<header class="flex flex-row-reverse justify-between items-center w-full px-8 h-20 bg-white/70 backdrop-blur-xl sticky top-0 z-40 border-b border-white/50 mb-12 rounded-2xl shadow-[0_20px_40px_-15px_rgba(99,102,241,0.08)]">
+<div class="flex flex-row-reverse items-center gap-6">
+<div class="relative w-96">
+<input class="w-full bg-slate-50 border-none focus:ring-2 focus:ring-indigo-100 rounded-xl pr-12 text-right font-arabic-body placeholder:text-slate-400" placeholder="البحث عن مريض أو سجل..." type="text">
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" style="">search</span>
+</div>
+<div class="flex flex-row-reverse gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-xl hover:bg-indigo-50/50 text-slate-500 transition-all active:scale-95" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl hover:bg-indigo-50/50 text-slate-500 transition-all active:scale-95" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-left">
+<p class="font-bold text-sm text-on-background" style="">د. ليلى أحمد</p>
+<p class="text-[10px] text-slate-500 font-bold" style="">طبيبة أطفال</p>
+</div>
+<img alt="الملف الشخصي للمستخدم" class="w-12 h-12 rounded-xl object-cover border-2 border-white shadow-md" data-alt="professional portrait of a female doctor in a white lab coat against a clean medical office background with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaRddNlSusJaa6BgH3G_lvNkBwDr7esL-DYOmAmN4BCiCmAvhZLAeDBpHJ2UJwwVpwxOKy0OWsYQd1IaZroenFnSA3XTKRs76OsfK3eBcx2qhe9gEHK5XEXuCUD7o0nEmobEcr6RECh_udvDiG-_HvSSEZ--IHL-Gg1wGY76XL6rS98BGdzkyMCI6D55jgs77Xy8cELv2u7WfQHuXwvpJ3SP646BBKGhUsOH3Qf6Eg1nXR2hp_8jYHAHljeo0-TrR9P0rX124mH0cy" style="">
+</div>
+</header>
+<!-- Page Title & Quick Actions -->
+<div class="flex flex-row-reverse justify-between items-end mb-12">
+<div class="text-right">
+<div class="flex flex-row-reverse items-center gap-2 text-indigo-600 font-bold text-sm mb-2">
+<span class="font-arabic-body" style="">المرضى</span>
+<span class="material-symbols-outlined text-xs" style="">arrow_back_ios</span>
+<span class="font-arabic-body" style="">ياسين عمر</span>
+<span class="material-symbols-outlined text-xs" style="">arrow_back_ios</span>
+<span class="font-arabic-body text-slate-400" style="">تحليلات النمو</span>
+</div>
+<h2 class="text-4xl font-headline-md font-bold text-on-background" style="">تحليلات النمو</h2>
+</div>
+<div class="flex gap-4">
+<button class="glass-card px-6 py-3 rounded-xl text-primary font-bold flex items-center gap-2 hover:bg-white transition-all" style="">
+<span class="material-symbols-outlined" style="">download</span>
+<span class="font-arabic-body" style="">تصدير PDF</span>
+</button>
+<button class="glass-card px-6 py-3 rounded-xl text-primary font-bold flex items-center gap-2 hover:bg-white transition-all" style="">
+<span class="material-symbols-outlined" style="">print</span>
+<span class="font-arabic-body" style="">طباعة السجل</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter mb-gutter">
+<!-- Patient Mini Profile Card -->
+<div class="col-span-12 lg:col-span-4 glass-card p-8 rounded-3xl flex flex-col items-center text-center">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-white shadow-xl overflow-hidden">
+<img alt="صورة الطفل" class="w-full h-full object-cover" data-alt="portrait of a cute young toddler boy with soft lighting and a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe0mU4w0MX4tbBikTgj04r8WqUm9jWeFRWLCnoyIcz8W0dnvdVuHsoLmf6AO8TPbaT-mzu_TnuTXnWdVlQYbVw_x1x_tWLHeaEvQoenWPSaOTtGDEGl9Lb8lvZUM68xev7Xlu8oNyQ20JcEzsfz__8fVi54d6raHuUXT3Tp8VJz3Nk4cCn5cu2rw7cvhLzKAlKsaH1TQdV89h1VZddLoKbzkyFWJhK6kTYHVACS773u2NA4fB6cKK21CpO8CiMeO3sqFr0z6o2QgFn" style="">
+</div>
+<div class="absolute bottom-1 right-1 w-8 h-8 bg-green-500 border-4 border-white rounded-full"></div>
+</div>
+<h3 class="text-2xl font-bold text-on-background mb-1" style="">ياسين عمر محمود</h3>
+<p class="text-slate-500 font-medium mb-6" style="">العمر: سنتان و3 أشهر</p>
+<div class="grid grid-cols-2 gap-4 w-full">
+<div class="bg-indigo-50/50 p-4 rounded-2xl text-right">
+<p class="text-xs text-indigo-400 font-bold mb-1" style="">تاريخ الميلاد</p>
+<p class="text-indigo-900 font-bold text-sm" style="">12 يناير 2022</p>
+</div>
+<div class="bg-purple-50/50 p-4 rounded-2xl text-right">
+<p class="text-xs text-purple-400 font-bold mb-1" style="">فصيلة الدم</p>
+<p class="text-purple-900 font-bold text-sm" style="">O+</p>
+</div>
+</div>
+</div>
+<!-- Key Stats Bento -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-2 gap-gutter">
+<div class="glass-card p-6 rounded-3xl flex flex-row-reverse items-center justify-between group hover:translate-y-[-4px] transition-all cursor-default">
+<div class="text-right">
+<p class="text-slate-500 font-medium text-sm mb-2" style="">الوزن الحالي</p>
+<div class="flex flex-row-reverse items-baseline gap-1">
+<span class="text-3xl font-bold text-on-background" style="">12.5</span>
+<span class="text-sm font-bold text-slate-400" style="">كجم</span>
+</div>
+<div class="flex flex-row-reverse items-center gap-1 text-green-500 mt-2 text-xs font-bold">
+<span class="material-symbols-outlined text-[14px]" style="">trending_up</span>
+<span class="" style="">+0.4 عن الشهر الماضي</span>
+</div>
+</div>
+<div class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-500 flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl" style="">monitor_weight</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-3xl flex flex-row-reverse items-center justify-between group hover:translate-y-[-4px] transition-all cursor-default">
+<div class="text-right">
+<p class="text-slate-500 font-medium text-sm mb-2" style="">الطول الحالي</p>
+<div class="flex flex-row-reverse items-baseline gap-1">
+<span class="text-3xl font-bold text-on-background" style="">88.2</span>
+<span class="text-sm font-bold text-slate-400" style="">سم</span>
+</div>
+<div class="flex flex-row-reverse items-center gap-1 text-indigo-500 mt-2 text-xs font-bold">
+<span class="material-symbols-outlined text-[14px]" style="">check_circle</span>
+<span class="" style="">ضمن المعدل الطبيعي</span>
+</div>
+</div>
+<div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-500 flex items-center justify-center group-hover:bg-purple-500 group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl" style="">straighten</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-3xl flex flex-row-reverse items-center justify-between group hover:translate-y-[-4px] transition-all cursor-default">
+<div class="text-right">
+<p class="text-slate-500 font-medium text-sm mb-2" style="">مؤشر كتلة الجسم (BMI)</p>
+<div class="flex flex-row-reverse items-baseline gap-1">
+<span class="text-3xl font-bold text-on-background" style="">16.1</span>
+</div>
+<div class="flex flex-row-reverse items-center gap-1 text-blue-500 mt-2 text-xs font-bold">
+<span class="material-symbols-outlined text-[14px]" style="">info</span>
+<span class="" style="">نمو متناسق</span>
+</div>
+</div>
+<div class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-500 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl" style="">calculate</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-3xl flex flex-row-reverse items-center justify-between group hover:translate-y-[-4px] transition-all cursor-default">
+<div class="text-right">
+<p class="text-slate-500 font-medium text-sm mb-2" style="">النسبة المئوية</p>
+<div class="flex flex-row-reverse items-baseline gap-1">
+<span class="text-3xl font-bold text-on-background" style="">50<sup>th</sup></span>
+</div>
+<div class="flex flex-row-reverse items-center gap-1 text-amber-500 mt-2 text-xs font-bold">
+<span class="material-symbols-outlined text-[14px]" style="">star</span>
+<span class="" style="">أفضل من المتوسط</span>
+</div>
+</div>
+<div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl" style="">leaderboard</span>
+</div>
+</div>
+</div>
+<!-- Weight Chart Card -->
+<div class="col-span-12 lg:col-span-6 glass-card p-8 rounded-3xl overflow-hidden relative">
+<div class="flex flex-row-reverse justify-between items-center mb-8">
+<div class="text-right">
+<h4 class="text-xl font-bold text-on-background mb-1" style="">منحنى الوزن (كجم)</h4>
+<p class="text-sm text-slate-400" style="">مقارنة مع معايير منظمة الصحة العالمية (WHO)</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-[10px] font-bold rounded-full" style="">الوزن</span>
+<span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-full" style="">المعدل العام</span>
+</div>
+</div>
+<div class="h-64 w-full relative flex items-end gap-2">
+<!-- Abstract Scientific Chart Visualization -->
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 200">
+<!-- WHO Ranges -->
+<path d="M0 160 Q 100 150, 200 120 T 400 60" fill="none" stroke="#E2E8F0" stroke-width="1"></path>
+<path d="M0 180 Q 100 170, 200 140 T 400 80" fill="none" stroke="#E2E8F0" stroke-width="1"></path>
+<!-- Area Gradient -->
+<path d="M0 170 Q 100 160, 200 130 T 400 70 L 400 200 L 0 200 Z" fill="url(#grad1)" fill-opacity="0.2"></path>
+<!-- Main Growth Curve -->
+<path d="M0 170 Q 100 160, 200 130 T 400 70" fill="none" stroke="#4648d4" stroke-linecap="round" stroke-width="4"></path>
+<!-- Data Points -->
+<circle cx="0" cy="170" fill="#4648d4" r="4"></circle>
+<circle cx="100" cy="155" fill="#4648d4" r="4"></circle>
+<circle cx="200" cy="130" fill="#4648d4" r="4"></circle>
+<circle cx="300" cy="100" fill="#4648d4" r="4"></circle>
+<circle cx="400" cy="70" fill="#4648d4" r="6" stroke="white" stroke-width="2"></circle>
+<defs>
+<linearGradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#4648d4;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<!-- X-Axis Labels -->
+<div class="flex justify-between mt-4 text-[10px] text-slate-400 font-bold px-2">
+<span class="" style="">6 أشهر</span>
+<span class="" style="">12 شهر</span>
+<span class="" style="">18 شهر</span>
+<span class="" style="">24 شهر</span>
+<span class="" style="">الآن</span>
+</div>
+</div>
+<!-- Height Chart Card -->
+<div class="col-span-12 lg:col-span-6 glass-card p-8 rounded-3xl overflow-hidden relative">
+<div class="flex flex-row-reverse justify-between items-center mb-8">
+<div class="text-right">
+<h4 class="text-xl font-bold text-on-background mb-1" style="">منحنى الطول (سم)</h4>
+<p class="text-sm text-slate-400" style="">تتبع الطول بالنسبة للعمر</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-purple-100 text-purple-700 text-[10px] font-bold rounded-full" style="">الطول</span>
+<span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-full" style="">المتوسط</span>
+</div>
+</div>
+<div class="h-64 w-full relative flex items-end gap-2">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 200">
+<!-- WHO Ranges -->
+<path d="M0 150 Q 150 140, 250 110 T 400 50" fill="none" stroke="#E2E8F0" stroke-width="1"></path>
+<!-- Area Gradient -->
+<path d="M0 155 Q 150 145, 250 115 T 400 55 L 400 200 L 0 200 Z" fill="url(#grad2)" fill-opacity="0.2"></path>
+<!-- Main Growth Curve -->
+<path d="M0 155 Q 150 145, 250 115 T 400 55" fill="none" stroke="#8127cf" stroke-linecap="round" stroke-width="4"></path>
+<!-- Data Points -->
+<circle cx="100" cy="148" fill="#8127cf" r="4"></circle>
+<circle cx="200" cy="130" fill="#8127cf" r="4"></circle>
+<circle cx="400" cy="55" fill="#8127cf" r="6" stroke="white" stroke-width="2"></circle>
+<defs>
+<linearGradient id="grad2" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#8127cf;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between mt-4 text-[10px] text-slate-400 font-bold px-2">
+<span class="" style="">6 أشهر</span>
+<span class="" style="">12 شهر</span>
+<span class="" style="">18 شهر</span>
+<span class="" style="">24 شهر</span>
+<span class="" style="">الآن</span>
+</div>
+</div>
+<!-- Historical Data Table -->
+<div class="col-span-12 glass-card rounded-3xl overflow-hidden">
+<div class="p-8 border-b border-white/50 flex flex-row-reverse justify-between items-center">
+<h4 class="text-xl font-bold text-on-background" style="">سجل القياسات</h4>
+<button class="text-indigo-600 font-bold text-sm flex items-center gap-1 hover:underline" style="">
+<span class="" style="">رؤية الكل</span>
+<span class="material-symbols-outlined text-sm" style="">arrow_back</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-right">
+<thead class="bg-slate-50/50 text-slate-500 font-bold text-xs uppercase tracking-wider">
+<tr>
+<th class="px-8 py-4" style="">التاريخ</th>
+<th class="px-8 py-4" style="">العمر</th>
+<th class="px-8 py-4" style="">الوزن (كجم)</th>
+<th class="px-8 py-4" style="">الطول (سم)</th>
+<th class="px-8 py-4" style="">الحالة</th>
+<th class="px-8 py-4" style="">الإجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 font-bold" style="">15 مارس 2024</td>
+<td class="px-8 py-5 text-slate-600" style="">27 شهر</td>
+<td class="px-8 py-5 font-bold" style="">12.5</td>
+<td class="px-8 py-5 font-bold" style="">88.2</td>
+<td class="px-8 py-5" style="">
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold" style="">طبيعي</span>
+</td>
+<td class="px-8 py-5" style="">
+<button class="text-slate-400 hover:text-indigo-600" style=""><span class="material-symbols-outlined" style="">more_horiz</span></button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 font-bold" style="">12 فبراير 2024</td>
+<td class="px-8 py-5 text-slate-600" style="">26 شهر</td>
+<td class="px-8 py-5 font-bold" style="">12.1</td>
+<td class="px-8 py-5 font-bold" style="">87.5</td>
+<td class="px-8 py-5" style="">
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold" style="">طبيعي</span>
+</td>
+<td class="px-8 py-5" style="">
+<button class="text-slate-400 hover:text-indigo-600" style=""><span class="material-symbols-outlined" style="">more_horiz</span></button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 font-bold" style="">10 يناير 2024</td>
+<td class="px-8 py-5 text-slate-600" style="">25 شهر</td>
+<td class="px-8 py-5 font-bold" style="">11.8</td>
+<td class="px-8 py-5 font-bold" style="">86.8</td>
+<td class="px-8 py-5" style="">
+<span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold" style="">متابعة</span>
+</td>
+<td class="px-8 py-5" style="">
+<button class="text-slate-400 hover:text-indigo-600" style=""><span class="material-symbols-outlined" style="">more_horiz</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+</main>
+
+<!-- Background Decoration -->
+<div class="fixed top-[-10%] left-[-5%] w-[40%] h-[40%] bg-indigo-100/30 rounded-full blur-[120px] -z-10"></div>
+<div class="fixed bottom-[-10%] right-[20%] w-[30%] h-[30%] bg-purple-100/30 rounded-full blur-[120px] -z-10"></div>
+<script>
+  function goToResult() {
+    window.location.href = "result.html"; // صفحة النتيجة
+  }
+
+  function goNext() {
+    window.location.href = "next.html"; // الصفحة اللي بعدها
+  }
+</script>
+</body></html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed": "#f0dbff",
+                        "secondary-fixed-dim": "#89ceff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#6063ee",
+                        "outline-variant": "#c7c4d7",
+                        "on-primary-fixed": "#07006c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "surface-tint": "#494bd6",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed-dim": "#ddb7ff",
+                        "surface-container": "#eceef0",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "inverse-primary": "#c0c1ff",
+                        "on-tertiary-fixed-variant": "#6900b3",
+                        "tertiary": "#8127cf",
+                        "secondary-container": "#39b8fd",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary": "#006591",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#9c48ea",
+                        "primary": "#4648d4",
+                        "surface-container-low": "#f2f4f6",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-container": "#004666",
+                        "outline": "#767586",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#c9e6ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed": "#001e2f",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#464554",
+                        "on-tertiary-fixed": "#2c0051",
+                        "on-primary-container": "#fffbff",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "primary-fixed": "#e1e0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "arabic-body": ["Tajawal"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "title-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "arabic-body": ["16px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .text-gradient {
+            background: linear-gradient(to left, #4648d4, #8127cf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright font-arabic-body text-on-surface">
+<!-- TopNavBar Shell -->
+<header class="bg-white/70 backdrop-blur-xl border-b border-white/50 shadow-[0_20px_40px_-15px_rgba(99,102,241,0.08)] flex flex-row-reverse justify-between items-center w-full px-8 h-20 sticky top-0 z-50">
+<div class="flex flex-row-reverse items-center gap-6">
+<h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-indigo-600 to-purple-500 font-['Plus_Jakarta_Sans']" style="">Children Growth</h1>
+<div class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="text-slate-500 hover:text-indigo-600 transition-all font-arabic-body" href="#" style="">الرئيسية</a>
+<a class="text-indigo-600 font-bold border-b-2 border-indigo-600 font-arabic-body" href="#" style="">سجل التطعيمات</a>
+<a class="text-slate-500 hover:text-indigo-600 transition-all font-arabic-body" href="#" style="">منحنيات النمو</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<input class="bg-slate-100 border-none rounded-full px-6 py-2 w-64 text-right focus:ring-2 focus:ring-indigo-500 transition-all" placeholder="بحث..." type="text">
+<span class="material-symbols-outlined absolute left-4 top-2 text-slate-400" style="">search</span>
+</div>
+<button class="p-2 text-slate-500 hover:bg-indigo-50/50 rounded-full transition-all active:scale-95" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-indigo-50/50 rounded-full transition-all active:scale-95" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden border-2 border-white shadow-sm">
+<img alt="الملف الشخصي للمستخدم" data-alt="professional medical portrait of a female doctor in a clinical setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnSzdNeDwQouUT96wdyCQr2UuHGZAom-SS8gnCUIiA-AjTRNfaqgXxHBwXKM9NvzFTkEeKc2u6lkoz7-Ic4OmEXUh_4SF94wI2lKlSc_Q--lhp1Tr9-S20EHsGVr2pBI0AeJlZyENdN6L4t0tRV2l0EYihrmvSGs_Kxdt1F0-Rb7GXC7fsxMcSzNkMsayzQxEYCa6rfSvuazT-z6lKibpfVLf0Elo8OxGUeT2TGr7uNA2QFj_sJ9c5vOQ5v6jh59WmCEb5k6pQ0f5f" class="" style="">
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar Shell -->
+<aside class="hidden lg:flex flex-col h-[calc(100vh-5rem)] w-72 sticky top-20 border-l border-slate-100 bg-white/80 backdrop-blur-2xl p-6 space-y-2">
+<nav class="flex-1 space-y-1">
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all group" href="#" style="">
+<span class="material-symbols-outlined ml-3 text-slate-400 group-hover:text-indigo-600" style="">dashboard</span>
+<span class="font-medium" style="">لوحة التحكم</span>
+</a>
+<h2 class="text-headline-md font-headline-md text-on-background mb-xs">سجل التطعيمات</h2>
+<button onclick="goToResult()" class="mt-4 bg-gradient-to-l from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-xl font-bold hover:scale-95 transition-all">
+عرض النتيجة
+</button>
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all group" href="#" style="">
+<span class="material-symbols-outlined ml-3 text-slate-400 group-hover:text-indigo-600" style="">show_chart</span>
+<span class="font-medium" style="">منحنيات النمو</span>
+</a>
+<a class="flex flex-row-reverse items-center bg-indigo-50/80 text-indigo-700 rounded-lg px-4 py-3 font-semibold" href="#" style="">
+<span class="material-symbols-outlined ml-3" style="font-variation-settings: &quot;FILL&quot; 1;">vaccines</span>
+<span class="font-medium" style="">سجل التطعيمات</span>
+</a>
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all group" href="#" style="">
+<span class="material-symbols-outlined ml-3 text-slate-400 group-hover:text-indigo-600" style="">calendar_today</span>
+<span class="font-medium" style="">المواعيد</span>
+</a>
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all group" href="#" style="">
+<span class="material-symbols-outlined ml-3 text-slate-400 group-hover:text-indigo-600" style="">description</span>
+<span class="font-medium" style="">التقارير</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-slate-100">
+
+
+<button onclick="goToResult()" class="mt-4 bg-gradient-to-l from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-xl font-bold hover:scale-95 transition-all">
+عرض النتيجة
+</button>
+</div>
+<div class="space-y-1">
+<a class="flex flex-row-reverse items-center text-slate-600 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all" href="#" style="">
+<span class="material-symbols-outlined ml-3" style="">settings</span>
+<span class="" style="">الإعدادات</span>
+</a>
+<a class="flex flex-row-reverse items-center text-error px-4 py-3 hover:bg-error-container/20 rounded-lg transition-all" href="#" style="">
+<span class="material-symbols-outlined ml-3" style="">logout</span>
+<span class="" style="">تسجيل الخروج</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-lg max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-lg flex flex-col md:flex-row-reverse justify-between items-start md:items-end gap-md">
+<div class="text-right">
+<h2 class="text-headline-md font-headline-md text-on-background mb-xs" style="">سجل التطعيمات</h2>
+<p class="text-on-surface-variant text-body-md" style="">متابعة دقيقة لجدول تحصين الطفل والجرعات القادمة</p>
+</div>
+<div class="glass-card px-md py-sm rounded-xl border-white/40 flex flex-row-reverse items-center gap-md">
+<div class="text-right">
+<p class="text-label-sm text-slate-500" style="">اسم المريض</p>
+<p class="text-title-sm font-bold" style="">فهد العتيبي</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+<span class="material-symbols-outlined" style="">child_care</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Progress Summary Card -->
+<div class="lg:col-span-4 glass-card p-md rounded-3xl flex flex-col justify-between h-full min-h-[320px]">
+<div>
+<div class="flex justify-between items-start mb-md">
+<span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-label-sm font-bold" style="">مكتمل بنسبة 65%</span>
+<span class="material-symbols-outlined text-indigo-600 text-3xl" style="">analytics</span>
+</div>
+<h3 class="text-title-sm mb-base text-right" style="">تقدم التحصين</h3>
+<p class="text-on-surface-variant text-right text-body-md mb-lg" style="">تبقت 4 جرعات أساسية لإتمام الجدول الوطني للسنة الأولى.</p>
+</div>
+<div class="space-y-md">
+<div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-l from-indigo-600 to-purple-500 w-[65%] rounded-full"></div>
+</div>
+<div class="flex flex-row-reverse justify-between text-label-sm text-slate-500">
+<span class="" style="">12 جرعة مكتملة</span>
+<span class="" style="">18 جرعة إجمالية</span>
+</div>
+</div>
+</div>
+<!-- Next Appointment Card -->
+<div class="lg:col-span-4 glass-card p-md rounded-3xl relative overflow-hidden h-full min-h-[320px]">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-indigo-50 rounded-full opacity-50 blur-3xl"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-md">
+<span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-label-sm font-bold" style="">موعد قريب</span>
+<span class="material-symbols-outlined text-amber-600 text-3xl" style="">event</span>
+</div>
+<h3 class="text-title-sm mb-base text-right" style="">الموعد القادم</h3>
+<div class="text-right mt-auto">
+<p class="text-display-lg font-display-lg text-indigo-600 mb-xs" style="">14</p>
+<p class="text-headline-md font-headline-md" style="">أكتوبر 2023</p>
+<p class="text-body-md text-slate-500 mt-sm" style="">تطعيم الـ 9 أشهر (الحصبة والدرن)</p>
+</div>
+</div>
+</div>
+<!-- Fast Actions / Stats -->
+<div class="lg:col-span-4 grid grid-rows-2 gap-gutter">
+<div class="glass-card p-md rounded-3xl flex flex-row-reverse items-center justify-between">
+<div class="text-right">
+<p class="text-label-sm text-slate-500" style="">آخر تطعيم</p>
+<p class="text-title-sm font-bold" style="">تطعيم 6 أشهر</p>
+<p class="text-label-sm text-indigo-600" style="">منذ 82 يوماً</p>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-on-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" style="">verified</span>
+</div>
+</div>
+<div class="glass-card p-md rounded-3xl flex flex-row-reverse items-center justify-between bg-indigo-600 text-white">
+<div class="text-right">
+<p class="text-label-sm opacity-80" style="">تحميل السجل</p>
+<p class="text-title-sm font-bold" style="">تقرير طبي PDF</p>
+</div>
+<button class="w-14 h-14 rounded-2xl bg-white/20 text-white flex items-center justify-center hover:bg-white/30 transition-all" style="">
+<span class="material-symbols-outlined text-3xl" style="">download</span>
+</button>
+</div>
+</div>
+<!-- Main Checklist Section -->
+<div class="lg:col-span-12 mt-md">
+<div class="glass-card rounded-3xl overflow-hidden">
+<div class="px-lg py-md border-b border-slate-100 flex flex-row-reverse justify-between items-center">
+<h3 class="text-title-sm" style="">قائمة التطعيمات الوطنية</h3>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-lg text-label-sm bg-indigo-50 text-indigo-600 font-bold" style="">الكل</button>
+<button class="px-4 py-2 rounded-lg text-label-sm text-slate-500" style="">المكتملة</button>
+<button class="px-4 py-2 rounded-lg text-label-sm text-slate-500" style="">القادمة</button>
+</div>
+</div>
+<div class="divide-y divide-slate-50">
+<!-- Vaccination Item -->
+<div class="p-md hover:bg-slate-50/50 transition-all flex flex-row-reverse items-center gap-lg">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+<div class="w-6 h-6 rounded border-2 border-indigo-600 flex items-center justify-center bg-indigo-600">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: &quot;wght&quot; 700;">check</span>
+</div>
+</div>
+<div class="flex-1 text-right">
+<div class="flex flex-row-reverse items-center gap-sm mb-xs">
+<h4 class="text-body-md font-bold" style="">تطعيم عند الولادة</h4>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold" style="">الدرن، الكبد الوبائي ب</span>
+</div>
+<p class="text-label-sm text-slate-500" style="">تم الحقن بواسطة د. سارة في مستشفى الملك فيصل</p>
+</div>
+<div class="text-left">
+<p class="text-body-md font-bold" style="">01 يناير 2023</p>
+<p class="text-label-sm text-green-600 font-bold" style="">مكتمل</p>
+</div>
+</div>
+<!-- Vaccination Item -->
+<div class="p-md hover:bg-slate-50/50 transition-all flex flex-row-reverse items-center gap-lg">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+<div class="w-6 h-6 rounded border-2 border-indigo-600 flex items-center justify-center bg-indigo-600">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: &quot;wght&quot; 700;">check</span>
+</div>
+</div>
+<div class="flex-1 text-right">
+<div class="flex flex-row-reverse items-center gap-sm mb-xs">
+<h4 class="text-body-md font-bold" style="">عمر شهرين</h4>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold" style="">السداسي، البكتيريا العقدية، الروتا</span>
+</div>
+<p class="text-label-sm text-slate-500" style="">تم الحقن في مركز الرعاية الأولية</p>
+</div>
+<div class="text-left">
+<p class="text-body-md font-bold" style="">03 مارس 2023</p>
+<p class="text-label-sm text-green-600 font-bold" style="">مكتمل</p>
+</div>
+</div>
+<!-- Vaccination Item Pending -->
+<div class="p-md hover:bg-slate-50/50 transition-all flex flex-row-reverse items-center gap-lg bg-indigo-50/30">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+<div class="w-6 h-6 rounded border-2 border-indigo-200 bg-white"></div>
+</div>
+<div class="flex-1 text-right">
+<div class="flex flex-row-reverse items-center gap-sm mb-xs">
+<h4 class="text-body-md font-bold text-indigo-900" style="">عمر 9 أشهر</h4>
+<span class="bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded text-[10px] font-bold" style="">الحصبة المنفردة، الحمى الشوكية</span>
+</div>
+<p class="text-label-sm text-indigo-600/70" style="">الموعد المؤكد: مستشفى الملك فهد التخصصي</p>
+</div>
+<div class="text-left">
+<p class="text-body-md font-bold text-indigo-600" style="">14 أكتوبر 2023</p>
+<p class="text-label-sm text-amber-600 font-bold" style="">قيد الانتظار</p>
+</div>
+</div>
+<!-- Vaccination Item Locked -->
+<div class="p-md opacity-60 grayscale transition-all flex flex-row-reverse items-center gap-lg">
+<div class="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300" style="">lock</span>
+</div>
+<div class="flex-1 text-right">
+<div class="flex flex-row-reverse items-center gap-sm mb-xs">
+<h4 class="text-body-md font-bold" style="">عمر 12 شهر</h4>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold" style="">الثلاثي الفيروسي، الجديري المائي</span>
+</div>
+<p class="text-label-sm text-slate-500" style="">سيتم فتح الموعد تلقائياً عند بلوغ السنة</p>
+</div>
+<div class="text-left">
+<p class="text-body-md font-bold" style="">يناير 2024</p>
+<p class="text-label-sm text-slate-400 font-bold" style="">لاحقاً</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommendations / Clinical Notes -->
+<div class="lg:col-span-8">
+<div class="glass-card p-md rounded-3xl">
+<h3 class="text-title-sm mb-md text-right" style="">توصيات طبية هامة</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="p-sm rounded-2xl bg-indigo-50/50 border border-indigo-100 flex flex-row-reverse gap-sm">
+<span class="material-symbols-outlined text-indigo-600" style="">info</span>
+<p class="text-label-sm text-right leading-relaxed" style="">يرجى إحضار بطاقة العائلة الأصلية في الموعد القادم لتوثيق الجرعة في السجل الرسمي.</p>
+</div>
+<div class="p-sm rounded-2xl bg-purple-50/50 border border-purple-100 flex flex-row-reverse gap-sm">
+<span class="material-symbols-outlined text-purple-600" style="">medical_services</span>
+<p class="text-label-sm text-right leading-relaxed" style="">في حال ظهور حرارة طفيفة بعد التطعيم، يمكن استخدام خوافض الحرارة الموصوفة حسب الوزن.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Support Banner -->
+<div class="lg:col-span-4">
+<div class="relative rounded-3xl overflow-hidden bg-slate-900 h-full p-md flex flex-col justify-center min-h-[160px]">
+<img alt="medical support" class="absolute inset-0 w-full h-full object-cover opacity-30" data-alt="close up of a professional pediatrician's hands holding a stethoscope in a clean modern clinic with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxSTiFBVBQIvCYqW0gYSDsy8DD2_v0RwPAtlbU1kPurtzs_bEIshbG5tJk8XvIkMTkkgVX1fcbyQV9OKZOtSnNtAOP7lmqF50kYUGLlAm5iKhay2rojGoBXUF7hPSCjGYXCo1wHbamlE9isNxc9eeJshOvJUAgjOAoGGcODpU08JERPbQq0MqpEA4aGR9qe5SMgqs0wnyexYGwcjXSS-ss8H56RgEBLvewTaD_R6Xtie_EA4jteocSuXrwEfCXWYa_mIGi2iPa65SD" style="">
+<div class="relative z-10 text-right">
+<h4 class="text-white font-bold mb-xs" style="">تحتاج استشارة؟</h4>
+<p class="text-white/70 text-label-sm mb-md" style="">تواصل مع أطبائنا على مدار الساعة</p>
+<button class="bg-white text-slate-900 px-4 py-2 rounded-xl text-label-sm font-bold active:scale-95 transition-all" style="">تحدث الآن</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Navigation (Bottom Bar) -->
+<footer class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/90 backdrop-blur-xl border-t border-slate-100 flex items-center justify-around z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400" style="">
+<span class="material-symbols-outlined" style="">dashboard</span>
+<span class="text-[10px]" style="">الرئيسية</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-indigo-600" style="">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">vaccines</span>
+<span class="text-[10px] font-bold" style="">التطعيمات</span>
+</button>
+<div class="-mt-8 bg-indigo-600 p-3 rounded-full shadow-lg shadow-indigo-200 border-4 border-white">
+<span class="material-symbols-outlined text-white" style="">add</span>
+</div>
+<button class="flex flex-col items-center gap-1 text-slate-400" style="">
+<span class="material-symbols-outlined" style="">show_chart</span>
+<span class="text-[10px]" style="">النمو</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400" style="">
+<span class="material-symbols-outlined" style="">person</span>
+<span class="text-[10px]" style="">الملف</span>
+</button>
+</footer>
+<script>
+function goToResult() {
+    window.location.href = "../children_growth_4/code.html";
+}
+</script>
+</body></html>
